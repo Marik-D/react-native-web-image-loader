@@ -2,11 +2,8 @@
   "name": "react-native-web-image-loader",
   "version": "0.0.7",
   "description": "react-native-web-image-loader",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "rimraf lib/* && babel src --presets babel-preset-es2015 --plugins=syntax-flow,transform-object-rest-spread,transform-flow-strip-types,syntax-async-functions,transform-regenerator,transform-runtime --out-dir lib",
-    "prepublish": "npm run build"
-  },
+  "main": "src/index.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psychoo118/react-native-web-image-loader.git"

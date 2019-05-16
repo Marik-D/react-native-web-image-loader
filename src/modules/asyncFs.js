@@ -1,25 +1,30 @@
-import fs from 'fs'
+const fs = require('fs')
 
-export const statAsync = async ( filePath: string ) => {
-    return new Promise( ( resolve, reject ) => {
-        fs.stat( filePath, ( err, stats ) => {
-            if( err ) {
-                reject( err )
+const statAsync = async (filePath) => {
+    return new Promise((resolve, reject) => {
+        fs.stat(filePath, (err, stats) => {
+            if (err) {
+                reject(err)
             } else {
-                resolve( stats )
+                resolve(stats)
             }
         })
     })
 }
 
-export const readFileAsync = async ( filePath: string ) => {
-    return new Promise( ( resolve, reject ) => {
-        fs.readFile( filePath, ( err, data ) => {
-            if( err ) {
-                reject( err )
+const readFileAsync = async (filePath) => {
+    return new Promise((resolve, reject) => {
+        fs.readFile(filePath, (err, data) => {
+            if (err) {
+                reject(err)
             } else {
-                resolve( data )
+                resolve(data)
             }
         })
     })
+}
+
+module.exports = {
+    statAsync,
+    readFileAsync
 }
