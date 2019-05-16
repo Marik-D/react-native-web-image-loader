@@ -1,4 +1,4 @@
-const createImageWrapper = (classPath) => {
+const createImageWrapper = (classPath) => (size, images) => {
     const uri = `${images['@1x']}`
 
     delete images['@1x']
